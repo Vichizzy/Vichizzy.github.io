@@ -190,10 +190,30 @@ img { max-width: 100%; display: block; }
   padding: 5rem 1.5rem 4rem;
 }
 
+/* Mobile: photo shown centred above the text */
 .hero-image {
-  display: none; /* shown on wider screens via media query */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: -1;               /* renders before .hero-content in the grid */
+  padding: 3rem 1.5rem 0;  /* overrides the generic .hero > * padding */
 }
 
+.hero-image img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.28);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.35);
+}
+
+/* Pull the text up since the photo sits above it on mobile */
+.hero-content {
+  padding-top: 1.6rem;
+}
+
+/* Desktop (≥900px): side-by-side, photo on the right */
 @media (min-width: 900px) {
   .hero {
     display: flex;
@@ -208,9 +228,7 @@ img { max-width: 100%; display: block; }
     margin: 0 auto 0 max(1.5rem, calc((100vw - 1100px) / 2));
   }
   .hero-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    order: 0;              /* restore natural source order (right side) */
     flex: 0 0 320px;
     padding: 4rem 1.5rem 4rem 0;
     margin: 0;
@@ -218,8 +236,6 @@ img { max-width: 100%; display: block; }
   .hero-image img {
     width: 280px;
     height: 280px;
-    object-fit: cover;
-    border-radius: 50%;
     border: 4px solid rgba(255,255,255,0.2);
     box-shadow: 0 20px 60px rgba(0,0,0,0.3);
   }
