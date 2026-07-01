@@ -92,10 +92,3 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
-
-/* ── SHAP modal — close on Escape ────────────────────────────────────────── */
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') {
-    document.getElementById('shapModal').classList.remove('open');
-  }
-});

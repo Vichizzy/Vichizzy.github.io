@@ -206,13 +206,6 @@
               <li>Fairness analysis: no racial or sex disparity; modest age gap (younger 0.842 vs older 0.771)</li>
               <li>Auto-routing dual-model tool: selects 26-feature or 16-feature model based on available tests</li>
             </ul>
-            <div class="shap-preview">
-              <button class="shap-thumb-btn" onclick="document.getElementById('shapModal').classList.add('open')" aria-label="View SHAP feature importance chart">
-                <img src="assets/shap_beeswarm.png" alt="SHAP feature importance beeswarm plot" class="shap-thumb" />
-                <span class="shap-thumb-label">SHAP feature importance · click to enlarge</span>
-              </button>
-            </div>
-
             <div class="featured-links">
               <a href="https://github.com/Vichizzy/Alzheimer-MCI-prediction" target="_blank" rel="noopener" class="btn-primary">
                 View on GitHub
@@ -221,16 +214,6 @@
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
                 Live Demo
               </a>
-            </div>
-
-            <!-- SHAP lightbox modal -->
-            <div id="shapModal" class="shap-modal" role="dialog" aria-modal="true" aria-label="SHAP feature importance chart">
-              <div class="shap-modal-backdrop" onclick="document.getElementById('shapModal').classList.remove('open')"></div>
-              <div class="shap-modal-content">
-                <button class="shap-modal-close" onclick="document.getElementById('shapModal').classList.remove('open')" aria-label="Close">&times;</button>
-                <img src="assets/shap_beeswarm.png" alt="SHAP feature importance beeswarm plot — full size" />
-                <p class="shap-modal-caption">SHAP beeswarm plot: feature contributions to MCI conversion probability. RAVLT learning total is the strongest single predictor.</p>
-              </div>
             </div>
           </div>
         </div>

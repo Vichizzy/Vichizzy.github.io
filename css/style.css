@@ -258,7 +258,7 @@ img { max-width: 100%; display: block; }
   margin-bottom: 1.3rem;
 }
 
-.hero-title .accent { color: var(--teal-light); }
+.hero-title .accent { color: var(--white); }
 
 .hero-bio {
   font-size: 1.05rem;
@@ -817,116 +817,6 @@ img { max-width: 100%; display: block; }
   .featured-project { padding: 1.5rem; }
 }
 
-/* ── SHAP thumbnail + lightbox ────────────────────────────────────────────── */
-.shap-preview {
-  margin: 1.2rem 0 0.8rem;
-}
-
-.shap-thumb-btn {
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
-  padding: 0;
-  cursor: pointer;
-  display: inline-flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
-  overflow: hidden;
-  transition: box-shadow var(--transition), border-color var(--transition);
-  max-width: 340px;
-}
-
-.shap-thumb-btn:hover {
-  border-color: var(--teal);
-  box-shadow: 0 4px 14px rgba(13,148,136,0.18);
-}
-
-.shap-thumb {
-  width: 100%;
-  max-width: 340px;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-.shap-thumb-label {
-  display: block;
-  font-size: 0.72rem;
-  color: var(--text-muted);
-  padding: 0.35rem 0.7rem;
-  background: var(--bg);
-  width: 100%;
-  text-align: left;
-}
-
-/* Modal */
-.shap-modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  align-items: center;
-  justify-content: center;
-}
-
-.shap-modal.open {
-  display: flex;
-}
-
-.shap-modal-backdrop {
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 35, 64, 0.75);
-  backdrop-filter: blur(3px);
-}
-
-.shap-modal-content {
-  position: relative;
-  z-index: 1;
-  background: var(--white);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-lg);
-  max-width: min(900px, 92vw);
-  max-height: 90vh;
-  overflow: auto;
-  padding: 1rem;
-}
-
-.shap-modal-content img {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--radius-sm);
-}
-
-.shap-modal-caption {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  margin-top: 0.6rem;
-  line-height: 1.5;
-}
-
-.shap-modal-close {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.6rem;
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1.1rem;
-  line-height: 1;
-  cursor: pointer;
-  color: var(--text);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: background var(--transition);
-}
-
-.shap-modal-close:hover { background: var(--bg-alt); }
 
 @media (max-width: 480px) {
   .hero-title { font-size: 2.1rem; }
